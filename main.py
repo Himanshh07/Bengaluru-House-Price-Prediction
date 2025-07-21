@@ -33,9 +33,11 @@ def predict():
 
 
 
+
 import os
 
 if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))  # Use Render's dynamic port
-    app.run(debug=True, host='0.0.0.0', port=port)  # Bind to 0.0.0.0 for public access
+    port = int(os.environ.get('PORT', 10000))  # Render assigns this dynamically
+    app.run(debug=True, host='0.0.0.0', port=port)  # ✅ MUST use 0.0.0.0
+
 
